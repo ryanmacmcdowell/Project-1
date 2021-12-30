@@ -1,9 +1,9 @@
-trigger Trigger1 on Account (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
+trigger leadTrigger on Lead (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
 
     switch on trigger.operationType{
         when BEFORE_INSERT {
 
-            AccountHandler.accountDescriptionUpdater(trigger.new);
+            LeadHandler.checkForAccountMatches(trigger.new);
 
         }
         when BEFORE_UPDATE{
@@ -13,8 +13,6 @@ trigger Trigger1 on Account (before insert, before update, before delete, after 
 
         }
         when AFTER_INSERT{
-
-            AccountHandler.addCVRangerAssignmentTask(trigger.new);
 
         }
         when AFTER_UPDATE{

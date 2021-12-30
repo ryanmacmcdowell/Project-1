@@ -3,9 +3,8 @@ public class AccountHandler {
 
     }
 
-    public static void accountPhoneUpdater(List<Account> triggerAccounts){
+    public static void accountDescriptionUpdater(List<Account> triggerAccounts){
 
-        List<Account> newAcc = new List<Account>();
 
         for (Account acc : triggerAccounts){
             if(acc.Description == 'Cavalcade'){
@@ -14,10 +13,9 @@ public class AccountHandler {
                 continue;
             }
         }
-
-
-
     }
+
+
 
     public static void addCVRangerAssignmentTask(List<Account> insertedAccounts){
 
@@ -30,8 +28,8 @@ public class AccountHandler {
                     Task tsk = new Task();
                     tsk.Subject = 'Other';
                     tsk.Status = 'Not Started';
-                    tsk.Priority = 'Normal';
                     tsk.WhatId = currAcc.ID;
+                    tsk.Priority = 'Normal';
                     tsk.Subject = (currAcc.Name + ' needs a new Cavalcade Ranger Assignment!');
 
                     tskList.add(tsk);
