@@ -5,6 +5,8 @@ trigger leadTrigger on Lead (before insert, before update, before delete, after 
 
             LeadHandler.checkForAccountMatches(trigger.new);
 
+            LeadHandler.createNewTaskFromLead(trigger.new);
+
         }
         when BEFORE_UPDATE{
 

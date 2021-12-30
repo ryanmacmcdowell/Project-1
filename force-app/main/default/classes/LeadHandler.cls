@@ -54,7 +54,7 @@ public class LeadHandler {
             tskList.add(tsk);
         }
 
-             Insert tskList;
+             insert tskList;
         }
     
 }
