@@ -1,0 +1,33 @@
+<template>
+    <p class="slds-text-heading_small">{activeSectionMessage}</p>
+
+    <lightning-accordion class="example-accordion"
+                         onsectiontoggle={handleToggleSection}
+                         active-section-name="B">
+        <lightning-accordion-section name="A" label="General Manager">
+            <lightning-button-menu slot="actions"
+                                  alternative-text="Show menu"
+                                  icon-size="x-small"
+                                  menu-alignment="right">
+                <lightning-menu-item value="New" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="Edit" label="Menu Item Two"></lightning-menu-item>
+            </lightning-button-menu>
+            <p>ROGER HOYT</p>
+            <p>. </p>
+            <p>I am an enthusiastic and energetic team leader, teacher and coach who empowers people to be successful. I have a record of success in not-for-profit business measures including fundraising, fiscal management, budget development, membership retention, program implementation and endowment growth strategies. I have watched the Scouting program develop character in countless numbers of young people and am excited everyday about working with a terrific professional staff and thousands of volunteers to deliver the promise of Scouting to our communities.</p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="B" label="Backcountry Manager">
+            <p>DAVID O'NIEL</p>
+            <p>.</p>
+            <p>Responsible for oversight of Backcountry Operations with direct management of 18 camps. Tasks include program development, staff hiring and personnel management, governing of safety protocols, program supply requisition, and development of best practices.</p>
+         
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="C" label="Chief of Operations">
+            <p>STEVE NELSON</p>
+            <p>.</p>
+            <p>In charge of all personel and seasonal opertations of the ranch. Manages over 2,500 staff yearly as well as a 65,000 crew load on top. </p>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>

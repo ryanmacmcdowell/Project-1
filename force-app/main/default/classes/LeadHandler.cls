@@ -46,10 +46,9 @@ public class LeadHandler {
 
         for(Lead currLead : leadList){
             Task tsk = new Task();
-            tsk.Subject = 'Call Requested by ' +currLead.Name + ' from ' + currLead.Company;
-            tsk.Status = 'Completed';
+            tsk.Status = 'Not Started';
             tsk.Priority = 'Normal';
-            tsk.Subject = (currLead.Name + ' has requested a call from the Experience Page!');
+            tsk.Subject = (currLead.FirstName +' '+ currLead.LastName + ' has requested a call from the Experience Page!');
 
             tskList.add(tsk);
         }
